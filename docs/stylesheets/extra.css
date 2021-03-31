@@ -1,0 +1,59 @@
+html {
+  counter-reset: numero_figura 0;
+}
+
+/* h2::before {
+  display: inline !important;
+  content: counter(numero_apartado) ".- " !important;
+  counter-increment: numero_apartado;
+} */
+
+/* Para que los diagramas mermaid salgan centrados */
+.mermaid {
+  text-align: center;
+}
+
+.md-typeset__table {
+  display: table !important;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Para mostrar las imágenes centradas y con pie de foto */
+
+figure img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  text-align: center;
+  font-size: .9em;
+  margin-top: .5rem;
+  counter-increment: numero_figura;
+}
+
+figcaption::before {
+  content: "Figura " counter(numero_figura) " - ";
+}
+
+/* Para que el texto de playground se vea más grande */
+.CodeMirror-scroll {
+  font-size: 13.6px;
+  font-family:'Roboto Mono'
+}
+
+/* Para que playground no se muestre por encima de la toolbar al hacer scroll */
+.md-header {
+  z-index: 100 !important;
+}
+.md-sidebar {
+  z-index: 200 !important;
+}
+
+/* Para que la info no se vea tan pequeña */
+.admonition {
+  font-size: .75rem !important;
+}
+
