@@ -4,170 +4,101 @@ site_description: Apuntes sobre Docker
 site_url: http://informaticasaladillo.es/docker_site/
 nav:
     - Inicio: index.md
-    - Procesos e Hilos:
-      - 1 - Program. concurrente:
-        - 1.1 - Programa vs. Proceso: tema1-1.md
-        - 1.2 - Computación concurrente: tema1-2.md
-        - 1.3 - Procesos en el sistema operativo: tema1-3.md
-        - 1.4 - Técnicas de programación concurrente: tema1-4.md
-        - 1.5 - Orden de ejecución: tema1-5.md
-        - 1.6 - Sincronización: tema1-6.md
-        - 1.7 - Comunicación: tema1-7.md
-        - 1.8 - Propiedades de corrección: tema1-8.md
-      - 2 - Gestión de procesos:
-        - 2.1 - Runtime: tema2-1.md
-        - 2.2 - ProcessBuilder: tema2-2.md
-        - 2.3 - Flujos de comunicación: tema2-3.md
-        - 2.4 - Finalización: tema2-4.md
-        - 2.5 - ProcessHandle: tema2-5.md
-        - 2.6 - Alternativas de comunicación: tema2-6.md
-      - 3 - Gestión de hilos: 
-        - 3.1 - Introducción: tema3-1.md
-        - 3.2 - Thread: tema3-2.md
-        - 3.3 - Runnable: tema3-3.md
-        - 3.4 - Prioridad: tema3-4.md
-        - 3.5 - Interrumpir: tema3-5.md
-        - 3.6 - Dormir: tema3-6.md
-        - 3.7 - Esperar la finalización: tema3-7.md
-        - 3.8 - Daemons: tema3-8.md
-        - 3.9 - UncaughtExceptionHandler: tema3-9.md
-        - 3.10 - ThreadGroup: tema3-10.md
-        - 3.11 - ThreadFactory: tema3-11.md
-        - 3.12 - ThreadLocal: tema3-12.md
-      - 4 - Cerrojos: 
-        - 4.1 - Introducción a los sincronizadores: tema4-1.md
-        - 4.2 - Volatile: tema4-2.md
-        - 4.3 - Cerrojo intrínseco: tema4-3.md
-        - 4.4 - Lock striping: tema4-4.md
-        - 4.5 - Busy waiting: tema4-5.md
-        - 4.6 - Wait notify: tema4-6.md
-        - 4.7 - Lock: tema4-7.md
-        - 4.8 - Condition: tema4-8.md
-        - 4.9 - ReentrantReadWriteLock: tema4-9.md
-        - 4.10 - StampedLock: tema4-10.md
-        - 4.11 - Semaphore: tema4-11.md
-      - 5 - Barreras: 
-        - 5.1 - Barreras de sincronización: tema5-1.md
-        - 5.2 - CountDownLatch: tema5-2.md
-        - 5.3 - CyclicBarrier: tema5-3.md
-        - 5.4 - Phaser: tema5-4.md
-        - 5.5 - Exchanger: tema5-5.md
-      - 6 - Variables atómicas:
-        - 6.1 - Paquete atomic: tema6-1.md
-        - 6.2 - Variables atómicas: tema6-2.md
-        - 6.3 - Acumuladores atómicos: tema6-3.md
-        - 6.4 - VarHandle: tema6-4.md
-      - 7 - Colecciones thread-safe:
-        - 7.1 - Tipos de colecciones thread-safe: tema7-1.md
-        - 7.2 - Unmodifiable collections: tema7-2.md
-        - 7.3 - Copy on write collections: tema7-3.md
-        - 7.4 - Inmutable collections: tema7-4.md
-        - 7.5 - Synchronized collections: tema7-5.md
-        - 7.6 - Concurrent-aware collections: tema7-6.md
-        - 7.7 - Concurrent-aware collections que usan cerrojos: tema7-7.md
-        - 7.8 - Lock-free concurrent-aware collections: tema7-8.md
-      - 8 - Executor framework: 
-        - 8.1 - Introducción al executor framework: tema8-1.md
-        - 8.2 - Executor: tema8-2.md
-        - 8.3 - ThreadPoolExecutor: tema8-3.md
-        - 8.4 - Terminación de un ejecutor: tema8-4.md
-        - 8.5 - CachedThreadPool: tema8-5.md
-        - 8.6 - FixedThreadPool: tema8-6.md
-        - 8.7 - Callable: tema8-7.md
-        - 8.8 - Future: tema8-8.md
-        - 8.9 - Métodos de envío de tareas en la interfaz ExecutorService: tema8-9.md
-        - 8.10 - invokeAll(): tema8-10.md
-        - 8.11 - invokeAny(): tema8-11.md
-        - 8.12 - ThreadFactory: tema8-12.md
-        - 8.13 - RejectedExecutionHandler: tema8-13.md
-        - 8.14 - ScheduledThreadPoolExecutor: tema8-14.md
-        - 8.15 - Planificación del inicio de ejecución de una tarea: tema8-15.md
-        - 8.16 - Ejecutar una tarea de manera periódica: tema8-16.md
-        - 8.17 - Cancelación de tareas y terminación del ScheduledThreadPoolExecutor: tema8-17.md
-        - 8.18 - ExecutorCompletionService: tema8-18.md
-        - 8.19 - FutureTask: tema8-19.md
-      - 9 - Fork-Join framework: 
-        - 9.1 - Introducción al Fork-Join framework: tema9-1.md
-        - 9.2 - ForkJoinPool: tema9-2.md
-        - 9.3 - ForkJoinTask: tema9-3.md
-        - 9.4 - Algoritmo de robo de trabajo: tema9-4.md
-        - 9.5 - RecursiveAction: tema9-5.md
-        - 9.6 - RecursiveTask: tema9-6.md
-        - 9.7 - CountedCompleter: tema9-7.md
-        - 9.8 - Common Fork-Join pool: tema9-8.md
-      - 10 - CompletableFuture: 
-        - 10.1 - Introducción a CompletableFuture: tema10-1.md
-        - 10.2 - Nomenclatura de los métodos: tema10-2.md
-        - 10.3 - Métodos factoría: tema10-3.md
-        - 10.4 - Obtención del valor: tema10-4.md
-        - 10.5 - Ejecutar un runnable asíncronamente: tema10-5.md
-        - 10.6 - Consumir el resultado asíncronamente: tema10-6.md
-        - 10.7 - Transformar el resultado asíncronamente: tema10-7.md
-        - 10.8 - Gestión de excepciones: tema10-8.md
-        - 10.9 - Completado explícito: tema10-9.md
-        - 10.10 - Trabajo con más de dos CompletableFuture: tema10-10.md
-    - Networking:
-      - 11 - Sockets: 
-        - 11.1 - Arquitectura Cliente Servidor: tema11-1.md
-        - 11.2 - TCP/IP: tema11-2.md
-        - 11.3 - InetAddress: tema11-3.md
-        - 11.4 - Concepto de socket: tema11-4.md
-        - 11.5 - Sockets orientados a conexión: tema11-5.md
-        - 11.6 - Sockets no orientados a conexión: tema11-6.md
-      - 12 - HTTP: 
-        - 12.1 - URI: tema12-1.md
-        - 12.2 - URL: tema12-2.md
-        - 12.3 - URLEncoder y URLDecoder: tema12-3.md
-        - 12.4 - UrlConnection: tema12-4.md
-        - 12.5 - Protocolo HTTP: tema12-5.md
-        - 12.6 - Arquitectura REST: tema12-6.md
-        - 12.7 - HttpURLConnection: tema12-7.md
-        - 12.8 - OkHttp: tema12-8.md
-        - 12.9 - HttpClient: tema12-9.md
-        - 12.10 - Retrofit: tema12-10.md
-    - Corutinas:
-      - 13 - Kotlin coroutines:
-        - 13.1 - Técnicas de programación asíncrona: tema13-1.md
-        - 13.2 - Nuestra primera corutina: tema13-2.md
-        - 13.3 - Jobs y funciones suspendibles: tema13-3.md
-        - 13.4 - Concurrencia estructurada: tema13-4.md
-        - 13.5 - Contextos y dispatchers: tema13-5.md
-        - 13.6 - Ámbitos y subámbitos: tema13-6.md
-        - 13.7 - Cancelación: tema13-7.md
-        - 13.8 - async: tema13-8.md
-        - 13.9 - Gestión de excepciones: tema13-9.md
-    - Programación segura:
-      - 14 - Criptografía:
-        - 14.1 - Objetivos de seguridad: tema14-1.md
-        - 14.2 - Definición de criptografía: tema14-2.md
-        - 14.3 - Principios criptográficos: tema14-3.md
-        - 14.4 - Clasificación de algoritmos criptográficos: tema14-4.md
-        - 14.5 - JCA y JCE: tema14-5.md
-        - 14.6 - Proveedores y motores criptográficos: tema14-6.md
-        - 14.7 - Claves criptográficas: tema14-7.md
-        - 14.8 - Funciones hash: tema14-8.md
-        - 14.9 - Algoritmos de criptografía simétrica: tema14-9.md
-        - 14.10 - Algoritmos de criptografía asimétrica: tema14-10.md
-        - 14.11 - Firma digital: tema14-11.md
-        - 14.12 - Certificado digital: tema14-12.md
-        - 14.13 - Almacén de claves: tema14-13.md
-    - Android:
-      - 15 - Multihilo en Android:
-        - 15.1 - El hilo principal en Android: tema15-1.md
-        - 15.2 - Paso de mensajes al hilo principal: tema15-2.md
-        - 15.3 - Handler y Looper: tema15-3.md
+    - 1 - Introducción a Docker para desarrolladores:
+      - 1.1 - ¿Qué es Docker?: tema1-1.md
+      - 1.2 - Instalación de Docker: tema1-2.md
+      - 1.3 - Nuestro primer contenedor: tema1-3.md
+      - 1.4 - ¿Qué es Docker Hub?: tema1-4.md
+      - 1.5.- Uso de Docker para la docencia: tema1-5.md
+      - 1.6.- Tareas del tema: tema1-6.md
+    - 2 - Ejecución y gestión de contenedores:
+      - 2.1.- Ejecución de contenedores: tema2-1.md
+      - 2.2.- Listar los contenedores existentes: tema2-2.md
+      - 2.3.- Asignando nombre a los contenedores: tema2-3.md
+      - 2.4.- Arranque interactivo de un contenedor: tema2-4.md
+      - 2.5.- Ejecución de servicios. Puertos y variables de entorno: tema2-5.md
+      - 2.6.- Ejecución de órdenes en los contenedores: tema2-6.md
+      - 2.7.- Copia de archivos entre el equipo local y el contenedor: tema2-7.md
+      - 2.8.- Obtener información detallada de un contenedor: tema2-8.md
+      - 2.9.- Mostrar logs de un contenedor: tema2-9.md
+      - 2.10.- Parada, reinicio y reseteo de un contenedor: tema2-10.md
+      - 2.11.- Vídeo resumen del tema: tema2-11.md
+      - 2.12.- Tareas del tema: tema2-12.md
+    - 3 - Gestión de imágenes:
+      - 3.1.- Descarga de imágenes: tema3-1.md
+      - 3.2.- Listado de imágenes: tema3-2.md
+      - 3.3.- Obtener información de las imágenes: tema3-3.md
+      - 3.4.- Borrado de imágenes: tema3-4.md
+      - 3.5.- Otras órdenes relacionadas con las imágenes: tema3-5.md
+      - 3.6.- Vídeo resumen del tema: tema3-6.md
+      - 3.7.- Tareas del tema: tema3-7.md
+    - 4.- Persistencia en docker:
+      - 4.1.- Persistencia en los contenedores con volúmenes y bind mounts: tema4-1.md
+      - 4.2.- Gestión de volúmenes: tema4-2.md
+      - 4.3.- Asociando almacenamiento a los contenedores: tema4-3.md
+      - 4.4.- Herramientas Docker para IDEs: tema4-4.md
+      - 4.5.- Usos principales de volúmenes y bind mounts: tema4-5.md
+      - 4.6.- Depurando aplicaciones con bind mounts: tema4-6.md
+      - 4.7.- Tareas del tema: tema4-7.md
+    - 5.- Redes en docker:
+      - 5.1.- Tipos de redes en Docker: tema5-1.md
+      - 5.2.- Obtener información sobre las redes: tema5-2.md
+      - 5.3.- Gestión de redes docker: tema5-3.md
+      - 5.4.- Asociando redes a contenedores: tema5-4.md
+      - 5.5.- iptables en contenedores: tema5-5.md
+      - 5.6.- Vídeo resumen del tema: tema5-6.md
+      - 5.7.- Tareas del tema: tema5-7.md
+    - 6.- Creación de imágenes:
+      - 6.1.- Imágenes personalizadas: tema6-1.md
+      - 6.2.- Crear una imagen a partir de un contenedor: tema6-2.md
+      - 6.3.- Crear una imagen a partir de un fichero Dockerfile: tema6-3.md
+      - 6.4.- Definición de un fichero Dockerfile: tema6-4.md
+      - 6.5.- Fichero .dockerignore: tema6-5.md
+      - 6.6.- Conectando GitHub a DockerHub: tema6-6.md
+      - 6.7.- Tareas del tema: tema6-7.md
+    - 7.- Aplicaciones multicapa con docker-compose:
+      - 7.1.- docker-compose: tema7-1.md
+      - 7.2.- El archivo docker-compose.yml: tema7-2.md
+      - 7.3.- La orden docker-compose: tema7-3.md
+      - 7.4.- Aplicaciones en la docencia: tema7-4.md
+      - 7.5.- Publicación de archivos docker-compose en DockerHub: tema7-5.md
+      - 7.6.- Tareas del tema: tema7-6.md
+    - 8.- Asegurando contenedores:
+      - 8.1.- Seguridad en las imágenes: tema8-1.md
+      - 8.2.- Seguridad en el proceso de build: tema8-2.md
+      - 8.3.- Seguridad al arrancar los contenedores: tema8-3.md
+      - 8.4.- Vídeo resumen del tema: tema8-4.md
+      - 8.5.- Tareas del tema: tema8-5.md
+    - 9.- Jenkins y Docker:
+      - 9.1.- Conceptos básicos de integración y despliegue continuo: tema9-1.md
+      - 9.2.- Ejemplo práctico de Jenkins y Docker: tema9-2.md
+      - 9.3.- Tareas del tema: tema9-3.md 
+
 theme:
   name: material
   language: es
   palette:
-    primary: deep purple
-    accent: indigo
+      # Light mode
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: deep purple
+        accent: indigo
+        toggle:
+          icon: material/toggle-switch-off-outline
+          name: Switch to dark mode
+      # Dark mode
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: deep purple
+        accent: indigo
+        toggle:
+          icon: material/toggle-switch
+          name: Switch to light mode  
   logo: 'assets/logo.gif'
   favicon: 'assets/favicon.png'
   features:
-    - navigation.sections
     - toc.integrate
-    - navigation.tabs
+    - navigation.top
 markdown_extensions:
   - admonition
   - codehilite:
